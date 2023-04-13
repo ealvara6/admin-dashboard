@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid: 100px 500px / 1fr 5fr;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
