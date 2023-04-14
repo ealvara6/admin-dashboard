@@ -67,7 +67,7 @@ body {
     display: grid;
     border: 1px black solid;
     height: 75vh;
-    grid: 1fr 3fr / 1fr 5fr;
+    grid: 1fr 3fr / 1fr 2fr;
 }
 
 .sidebar {
@@ -83,13 +83,6 @@ body {
     color: white;
 }
 
-.dashboard-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: left;
-}
 
 .dashboard-icon {
     background-image: url(icons/sidebar-icons/view-dashboard\ \(1\).svg);
@@ -102,7 +95,7 @@ body {
     font-size: 25px;
 }
 
-.sidebar-icon {
+.icon {
     width: 25px;
     height: 25px;
     justify-self: center;
@@ -112,7 +105,7 @@ body {
     gap: 15px;
 }
 
-.user-actions > ul > li, .misc > ul > li {
+.user-actions > ul > li, .misc > ul > li, .dashboard-header {
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 1fr;
@@ -166,4 +159,61 @@ body {
 
 .main-content {
     border: 1px black solid;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+}
+
+.top-header .left-side {
+    display: flex;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.top-header .right-side {
+    display: grid;
+    grid-template-columns: 30px 50px 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+}
+
+#searchbar {
+    flex-grow: 1;
+}
+
+#search-icon {
+    background-image: url(icons/header-icons/magnify.svg);
+    background-repeat: no-repeat;
+}
+
+#notif-icon {
+    background-image: url(icons/header-icons/bell-ring.svg);
+}
+
+.profile-picture {
+    background-image: url(images/pexels-alina-vilchenko-2698519\ \(1\).jpg);
+    /* Photo by Alina Vilchenko: https://www.pexels.com/photo/close-up-photo-of-cat-2698519/ */
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}
+
+.user-name {
+    justify-self: left;
 }
