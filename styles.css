@@ -217,3 +217,36 @@ body {
 .user-name {
     justify-self: left;
 }
+
+.bottom-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.bottom-header .left-side {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.bottom-header
+ .left-side .profile-picture {   
+    justify-self: center;
+}
+
+.hello-message {
+    align-self: center;
+}
+
+.right-side{
+    justify-self: center;
+}
+
+.bottom-header .right-side .create-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+}
