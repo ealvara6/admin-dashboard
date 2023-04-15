@@ -58,16 +58,13 @@ table {
 
 body {
     font-family: 'roboto', sans-serif;
-    display: grid;
-    justify-content: center;
-    margin: 100px;
 }
 
 .container {
     display: grid;
     border: 1px black solid;
-    height: 75vh;
-    grid: 1fr 3fr / 1fr 2fr;
+    grid: 150px 3fr / 275px 1fr;
+    height: 100vh;
 }
 
 .sidebar {
@@ -76,7 +73,7 @@ body {
     grid: 50px repeat(2, 150px) / 1fr;
     gap: 50px;
     padding: 10px;
-    padding-right: 100px;
+    /* padding-right: 100px; */
     grid-column: 1;
     grid-row: 1 / 3;
     background-color: var(--main-bg-color);
@@ -152,11 +149,6 @@ body {
 #privacy-icon {
     background-image: url(icons/sidebar-icons/shield-check.svg);
 }
-
-.header {
-    border: 1px black solid;
-}
-
 .main-content {
     border: 1px black solid;
 }
@@ -164,7 +156,8 @@ body {
 .header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 50px 100px;
+    border: 1px black solid;
 }
 
 .top-header {
@@ -249,4 +242,65 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 15px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 300px 300px;
+}
+
+.card {
+    border: 1px black solid;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px repeat(3, 1fr);
+    grid-row: 1 / -1;
+}
+
+.cards :nth-child(1) {
+    grid-column: 1 / 3;
+    justify-self: start;
+}
+
+.announcments, .trending {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 20px 1fr;
+    grid-column: 2 / 4;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.announcments > :nth-child(2) , .trending > :nth-child(2) {
+    border: 1px solid black;
+}
+
+.trending > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.trending {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.trending-profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#profile-icon-one, #profile-icon-two, #profile-icon-three, #profile-icon-four {
+    background-image: url(icons/main-content-icons/trending/access-point.svg);
+    width: 15px;
+    height: 15px;
+    align-self: center;
+    justify-self: center;
 }
